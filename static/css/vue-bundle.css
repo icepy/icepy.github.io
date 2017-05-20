@@ -1,0 +1,207 @@
+
+.app-container{
+  background-color: #fff;
+}
+
+.wrapper {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  width: 750px;
+  height: 1100px;
+  background-color: #f8f8f8;
+}
+.title {
+  font-size: 60px;
+  color: #505050;
+  text-align: center;
+}
+.subtitle {
+  display: block;
+  font-size: 30px;
+  color: #AAAAAA;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.app-wrapper{
+  width: 750px;
+  background-color: #f8f8f8;
+}
+
+
+.todo-num{
+  color: red;
+}
+.no-more{
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.no-more-text{
+  font-size: 28px;
+}
+.no-more-image{
+  width: 32px;
+  height: 32px;
+  margin-right: 10px;
+}
+.app-todo-list{
+  width: 750px;
+  height: 800px;
+}
+.app-todo-item{
+  width: 750px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.todo-item{
+  width: 600px;
+  background-color: #fff;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+.todo-remove-box{
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.todo-remove-image{
+  width: 32px;
+  height: 32px;
+}
+.todo-no-check{
+  border-bottom-color: #999;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+}
+.todo-check{
+  border-bottom-color: #42b983;
+  border-bottom-style: solid;
+  border-bottom-width: 5px;
+}
+.todo-text{
+  width: 550px;
+}
+.todo-text-check{
+  text-decoration: line-through;
+}
+.todo-text-no-check{
+  text-decoration: none;
+}
+
+.app-users{
+  width:750px;
+  height: 136px;
+  background-color: #fff;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  margin-bottom: 32px;
+}
+.app-users-image-box{
+  width: 148px;
+  height: 136px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.app-users-image{
+  width: 100px;
+  height: 100px;
+  background-color: #f8f8f8;
+}
+.app-users-name-box{
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.app-users-name{
+  font-size: 34px;
+  color: #323334
+}
+
+.app-todo-add{
+  width: 750px;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  background-color: #f8f8f8;
+}
+.app-todo-texttarea{
+  margin-top: 55px;
+}
+.app-todo-input{
+  width: 550px;
+  height: 80px;
+  border-bottom-color: #fff;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-top-color: #fff;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-left-color: #fff;
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-right-color: #fff;
+  border-right-style: solid;
+  border-right-width: 1px;
+  font-size: 28px;
+  padding-left: 5px;
+  padding-top: 20px;
+  background-color: #fff;
+}
+.app-todo-add-operation{
+  width: 550px;
+  height: 80px;
+  margin-top: 35px;
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.app-todo-confirm{
+  width: 270px;
+  height: 80px;
+  background-color: #42b983;
+  margin-right: 10px;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.app-todo-cancel{
+  width: 270px;
+  height: 80px;
+  background-color: #e06c75;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+.operation-text{
+  font-size: 30px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=vue-bundle.css.map*/
