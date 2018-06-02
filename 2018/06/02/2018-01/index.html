@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="在Mac上完成了搭建流程，Windows可能稍有不同。  目前来说NPM生态事实上完成了前端模块化系统的必要准备，因此如果你厂的业务会有Private的需求，这个Point会有两个方案给你选择：  基于cnpmjs.org搭建 直接购买npm company服务，一个人/一个月/7美金  其实在Github上还有另外一个方案：【sinopia】，只是这个库已经不在维护，也就放弃了选择这个方案。">
+<meta name="keywords" content="随想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="搭建 Private NPM">
+<meta property="og:url" content="https://icepy.me/2018/06/02/2018-01/index.html">
+<meta property="og:site_name" content="五溪">
+<meta property="og:description" content="在Mac上完成了搭建流程，Windows可能稍有不同。  目前来说NPM生态事实上完成了前端模块化系统的必要准备，因此如果你厂的业务会有Private的需求，这个Point会有两个方案给你选择：  基于cnpmjs.org搭建 直接购买npm company服务，一个人/一个月/7美金  其实在Github上还有另外一个方案：【sinopia】，只是这个库已经不在维护，也就放弃了选择这个方案。">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-06-02T05:27:36.193Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="搭建 Private NPM">
+<meta name="twitter:description" content="在Mac上完成了搭建流程，Windows可能稍有不同。  目前来说NPM生态事实上完成了前端模块化系统的必要准备，因此如果你厂的业务会有Private的需求，这个Point会有两个方案给你选择：  基于cnpmjs.org搭建 直接购买npm company服务，一个人/一个月/7美金  其实在Github上还有另外一个方案：【sinopia】，只是这个库已经不在维护，也就放弃了选择这个方案。">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png">
+          
+        
+    
+    <!-- title -->
+    <title>搭建 Private NPM</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/10/25/2017-01/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://icepy.me/2018/06/02/2018-01/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://icepy.me/2018/06/02/2018-01/&text=搭建 Private NPM"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://icepy.me/2018/06/02/2018-01/&is_video=false&description=搭建 Private NPM"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=搭建 Private NPM&body=Check out this article: https://icepy.me/2018/06/02/2018-01/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://icepy.me/2018/06/02/2018-01/&name=搭建 Private NPM&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#演示"><span class="toc-number">1.</span> <span class="toc-text">演示</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        搭建 Private NPM
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五溪</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-06-02T09:27:12.000Z" itemprop="datePublished">2018-06-02</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/随想/">随想</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>在Mac上完成了搭建流程，Windows可能稍有不同。</p>
+</blockquote>
+<p>目前来说NPM生态事实上完成了前端模块化系统的必要准备，因此如果你厂的业务会有Private的需求，这个Point会有两个方案给你选择：</p>
+<ul>
+<li>基于cnpmjs.org搭建</li>
+<li>直接购买npm company服务，一个人/一个月/7美金</li>
+</ul>
+<p>其实在Github上还有另外一个方案：<a href="https://github.com/rlidwka/sinopia" target="_blank" rel="noopener">【sinopia】</a>，只是这个库已经不在维护，也就放弃了选择这个方案。</p>
+<blockquote>
+<p>吐槽一下cnpmjs.org的Getting Start，《Deploy a private npm registry in 5 minutes》使用的是sqlite3，而exampless使用的是mysql，印证一些思考时，走了些弯路。（建议：统一起来会比较好）</p>
+</blockquote>
+<p>创建一个项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir web-private-npm &amp;&amp; <span class="built_in">cd</span> web-private-npm</span><br><span class="line">$ npm init -y</span><br><span class="line">$ npm i cnpmjs.org --save</span><br></pre></td></tr></table></figure>
+<p>安装mysql：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ brew install mysql</span><br><span class="line">$ mysql.server start</span><br><span class="line">$ mysql -uroot</span><br><span class="line">$ mysql &gt; show databases;</span><br></pre></td></tr></table></figure>
+<p>本地mysql可以不设置root密码，免得忘记。</p>
+<p>创建config.js和index.js：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ touch config.js</span><br><span class="line">$ touch index.js</span><br></pre></td></tr></table></figure>
+<p>在<code>docs</code> 目录中有db.sql文件，用于创建表字段，最好copy到你的项目中，因为cnpmjs.org包中的db.sql是个空文件。</p>
+<p>创建数据库和表字段：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mysql -uroot -e <span class="string">'CREATE DATABASE private_npm'</span></span><br><span class="line">$ mysql -uroot <span class="string">'private_npm'</span> &lt; ./db.sql</span><br><span class="line">$ mysql -uroot -e <span class="string">'shhow tables;'</span></span><br></pre></td></tr></table></figure>
+<p>通过<code>cnpmjs.org</code>的源码找到了两个<code>start</code>类的函数：</p>
+<ul>
+<li><a href="https://github.com/cnpm/cnpmjs.org/blob/master/index.js#L20" target="_blank" rel="noopener">startWork</a></li>
+<li><a href="https://github.com/cnpm/cnpmjs.org/blob/master/index.js#L25" target="_blank" rel="noopener">startSync</a></li>
+</ul>
+<p>以及<code>cnpmjs.org</code>自己的配置文件。</p>
+<p>大部分的时候我们基本就是在学习怎么配置它：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">module</span>.exports = &#123;</span><br><span class="line">  admin: &#123;</span><br><span class="line">    <span class="string">'icepy'</span>: <span class="string">'xiangwenwe@gmail.com'</span></span><br><span class="line">  &#125;,</span><br><span class="line">  database:&#123;</span><br><span class="line">    db: <span class="string">'private_npm'</span>,</span><br><span class="line">    username: <span class="string">'root'</span>,</span><br><span class="line">    password: <span class="string">''</span>,</span><br><span class="line">    dialect: <span class="string">'mysql'</span>,</span><br><span class="line">    host: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    port: <span class="number">3306</span>,</span><br><span class="line">    pool: &#123;</span><br><span class="line">      maxConnections: <span class="number">10</span>,</span><br><span class="line">      minConnections: <span class="number">0</span>,</span><br><span class="line">      maxIdleTime: <span class="number">30000</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  registryHost:<span class="string">'localhost:7001'</span>,</span><br><span class="line">  scopes:[<span class="string">'@icepy'</span>]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后我们可以使用这两个函数来启动cnpmjs.org：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> cnpm = <span class="built_in">require</span>(<span class="string">'cnpmjs.org'</span>);</span><br><span class="line"><span class="keyword">const</span> config = <span class="built_in">require</span>(<span class="string">'./config'</span>);</span><br><span class="line"></span><br><span class="line">cnpm.startWorker(config);</span><br><span class="line">cnpm.startSync(config);</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ node index.js</span><br><span class="line">[Sat Jun 02 2018 13:21:59 GMT+0800 (CST)] [worker:2888] Server started, registry server listen at 127.0.0.1:7001, web listen at 127.0.0.1:7002, cluster: <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>偷懒的给大家演示一下，正式环境不要像我这样。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.npmrc</span><br></pre></td></tr></table></figure>
+<p>直接在<code>.npmrc</code> 中配置 <code>registry=http://localhost:7001/</code></p>
+<p>登录本地的npm：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm login</span><br></pre></td></tr></table></figure>
+<p>用户名和邮箱输入在config.js文件中配置好的，密码随便填。</p>
+<p>创建一个项目：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir <span class="built_in">test</span> &amp;&amp; <span class="built_in">cd</span> <span class="built_in">test</span></span><br><span class="line">$ npm init -y</span><br><span class="line">$ touch index.js</span><br></pre></td></tr></table></figure>
+<p>将package.json文件中的name修改为<code>@icepy/test</code></p>
+<p>上传：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm publish</span><br></pre></td></tr></table></figure>
+<p>安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir test1 &amp;&amp; <span class="built_in">cd</span> test1</span><br><span class="line">$ npm init -y</span><br><span class="line">$ npm i @icepy/<span class="built_in">test</span> --save</span><br></pre></td></tr></table></figure>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#演示"><span class="toc-number">1.</span> <span class="toc-text">演示</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://icepy.me/2018/06/02/2018-01/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://icepy.me/2018/06/02/2018-01/&text=搭建 Private NPM"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://icepy.me/2018/06/02/2018-01/&is_video=false&description=搭建 Private NPM"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=搭建 Private NPM&body=Check out this article: https://icepy.me/2018/06/02/2018-01/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://icepy.me/2018/06/02/2018-01/&title=搭建 Private NPM"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://icepy.me/2018/06/02/2018-01/&name=搭建 Private NPM&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 icepy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-118762667-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+

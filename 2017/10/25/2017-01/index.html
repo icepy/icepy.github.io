@@ -6,20 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。   《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：">
+    <meta name="description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。  《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：使">
 <meta name="keywords" content="随想">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《深入理解 ES6》读书笔记，初入前端必学">
 <meta property="og:url" content="https://icepy.me/2017/10/25/2017-01/index.html">
 <meta property="og:site_name" content="五溪">
-<meta property="og:description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。   《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：">
+<meta property="og:description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。  《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：使">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://pic4.zhimg.com/v2-af8edfd147e8b50067749959a1398db2_1200x500.jpg">
-<meta property="og:updated_time" content="2018-05-27T12:56:44.153Z">
+<meta property="og:updated_time" content="2018-06-02T04:53:38.453Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《深入理解 ES6》读书笔记，初入前端必学">
-<meta name="twitter:description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。   《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：">
-<meta name="twitter:image" content="https://pic4.zhimg.com/v2-af8edfd147e8b50067749959a1398db2_1200x500.jpg">
+<meta name="twitter:description" content="《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。  《深入理解ES6》阅读笔记 — babel 《深入理解ES6》阅读笔记 — 块级作用域 《深入理解ES6》阅读笔记 — 正则表达式和字符串 《深入理解ES6》阅读笔记 — 函数 《深入理解ES6》阅读笔记 — 扩展对象的功能性 《深入理解ES6》阅读笔记 — 解构：使">
     
     
         
@@ -76,6 +74,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2018/06/02/2018-01/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2015/06/24/2015-01/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -145,7 +145,6 @@
 
   <div class="content" itemprop="articleBody">
     <p>《深入理解ES6》阅读笔记并不会照搬书上的内容，因为我觉得那很无趣，这些读书笔记会贯穿我自己所积累的知识和理解，首发于知乎专栏。</p>
-<p><img src="https://pic4.zhimg.com/v2-af8edfd147e8b50067749959a1398db2_1200x500.jpg" alt="《深入理解ES6》阅读笔记"></p>
 <ul>
 <li><a href="https://zhuanlan.zhihu.com/p/28826381" target="_blank" rel="noopener">《深入理解ES6》阅读笔记 — babel</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/28826556" target="_blank" rel="noopener">《深入理解ES6》阅读笔记 — 块级作用域</a></li>
