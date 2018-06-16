@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="光阴荏苒，岁月蹉跎；  前些日子看电视剧翻到了刘烨的《血色浪漫》，其实我是一个很感性的人，电视剧中的人物：钟跃民，张海洋，周晓白，一幕一幕的从脑中闪过，很钦佩钟跃民对于人生的感悟，他有着无拘无束，散漫自由的天性。同时又善于在逆境中寻找乐趣（在陕北插队时），他很坚强，也很勇猛，可以用不文明对待不文明的方式来解决很多问题。他也很讲义气，可以在患难中把一张烧饼分给朋友吃的那种人。或多，或少，我和钟跃民">
+<meta name="keywords" content="随想">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的编程之路">
+<meta property="og:url" content="https://icepy.me/2016/04/05/2016-01/index.html">
+<meta property="og:site_name" content="五溪">
+<meta property="og:description" content="光阴荏苒，岁月蹉跎；  前些日子看电视剧翻到了刘烨的《血色浪漫》，其实我是一个很感性的人，电视剧中的人物：钟跃民，张海洋，周晓白，一幕一幕的从脑中闪过，很钦佩钟跃民对于人生的感悟，他有着无拘无束，散漫自由的天性。同时又善于在逆境中寻找乐趣（在陕北插队时），他很坚强，也很勇猛，可以用不文明对待不文明的方式来解决很多问题。他也很讲义气，可以在患难中把一张烧饼分给朋友吃的那种人。或多，或少，我和钟跃民">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s2604186.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s4380650.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s3103215.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s24398905.jpg">
+<meta property="og:image" content="http://ec4.images-amazon.com/images/I/51hoD75E26L._SX397_BO1,204,203,200_.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s5860151.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s3651235.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s3398900.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s8958650.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s6245861.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s3885296.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s28020216.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s3890550.jpg">
+<meta property="og:image" content="http://ec4.images-amazon.com/images/I/51L3vC93PEL._SX383_BO1,204,203,200_.jpg">
+<meta property="og:image" content="http://ec4.images-amazon.com/images/I/51yWNzHYyUL._SX357_BO1,204,203,200_.jpg">
+<meta property="og:image" content="http://ec4.images-amazon.com/images/I/51yo0pczfbL._SX340_BO1,204,203,200_.jpg">
+<meta property="og:image" content="http://ec4.images-amazon.com/images/I/51U7%2BI63eWL._SX354_BO1,204,203,200_.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s25933771.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s9066310.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s27269296.jpg">
+<meta property="og:image" content="https://img3.doubanio.com/lpic/s6164140.jpg">
+<meta property="og:updated_time" content="2018-06-16T08:36:47.902Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="我的编程之路">
+<meta name="twitter:description" content="光阴荏苒，岁月蹉跎；  前些日子看电视剧翻到了刘烨的《血色浪漫》，其实我是一个很感性的人，电视剧中的人物：钟跃民，张海洋，周晓白，一幕一幕的从脑中闪过，很钦佩钟跃民对于人生的感悟，他有着无拘无束，散漫自由的天性。同时又善于在逆境中寻找乐趣（在陕北插队时），他很坚强，也很勇猛，可以用不文明对待不文明的方式来解决很多问题。他也很讲义气，可以在患难中把一张烧饼分给朋友吃的那种人。或多，或少，我和钟跃民">
+<meta name="twitter:image" content="https://img3.doubanio.com/lpic/s2604186.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="//gw.alicdn.com/tfs/TB1th9Efh9YBuNjy0FfXXXIsVXa-64-64.png">
+          
+        
+    
+    <!-- title -->
+    <title>我的编程之路</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- persian styles -->
+    
+      <link rel="stylesheet" href="/css/rtl.css">
+    
+    <!-- rss -->
+    
+    
+</head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" href="/2017/10/25/2017-01/"><i class="fas fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" href="/2015/06/24/2015-01/"><i class="fas fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fas fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://icepy.me/2016/04/05/2016-01/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://icepy.me/2016/04/05/2016-01/&text=我的编程之路"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://icepy.me/2016/04/05/2016-01/&is_video=false&description=我的编程之路"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=我的编程之路&body=Check out this article: https://icepy.me/2016/04/05/2016-01/"><i class="fas fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://icepy.me/2016/04/05/2016-01/&name=我的编程之路&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2016年"><span class="toc-number">1.</span> <span class="toc-text">2016年</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        我的编程之路
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">五溪</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2016-04-05T06:42:56.000Z" itemprop="datePublished">2016-04-05</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fas fa-tag"></i>
+        <a class="tag-link" href="/tags/随想/">随想</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <blockquote>
+<p>光阴荏苒，岁月蹉跎；</p>
+</blockquote>
+<p>前些日子看电视剧翻到了刘烨的《血色浪漫》，其实我是一个很感性的人，电视剧中的人物：钟跃民，张海洋，周晓白，一幕一幕的从脑中闪过，很钦佩钟跃民对于人生的感悟，他有着无拘无束，散漫自由的天性。同时又善于在逆境中寻找乐趣（在陕北插队时），他很坚强，也很勇猛，可以用不文明对待不文明的方式来解决很多问题。他也很讲义气，可以在患难中把一张烧饼分给朋友吃的那种人。或多，或少，我和钟跃民的性格有大部分的相像，怀旧，又对于“新生活“而憧憬。</p>
+<p>说到编程其实我是半路出身的人，在很多年之前编程对于我形同“在塔克拉玛干中找绿洲一般”，撞上完全看概率。在很小的时候家里没有电脑，但是却有小霸王，（还是父亲从广州托人邮寄回来的）虽然父亲希望我能用它学习打字，不过多数情况下，我都用它在玩《魂斗罗》了。最开始接触编程（有意识的）还是在读高中的时候，学校对于市里的《电脑比赛》很重视，虽然是打字，以及基础的C语言（题目我还记得很清楚，输出一个乘法表）。但是我没有继续学习，比赛完之后就抛之脑后了。不过可喜的是，我竟然发现自己很喜欢电脑课老师推荐学习的python，坚持阅读完了一本书：</p>
+<p><a href="https://book.douban.com/subject/2137490/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s2604186.jpg" alt=""></a></p>
+<p>高中读完（没有去念大学），一直在雪峰山里的老家，过着自己的隐居生活，一过既是三年。</p>
+<p>至今我都还能想到那一年刚到长沙（2011年）的夏天，穿着短袖站在长沙火车站，脸油油的一夜未睡，从怀化到长沙的绿皮火车需要开一个通宵才能到长沙。（去找第一份工作，当时还叫网页制作），那时候的我如同一个小白，大约知道一些标签（去面试之前，临时看了看百度的信息，不要问我Google是什么，当时真只知道百度。）面试我的大哥姓周，现在我们还是很好的朋友（他在长沙结婚，生子，有了自己的事业和家庭，过的很幸福），就这样误打误撞的得到了一份工作（有人教，真的很爽），不过自己也够上进，知道该怎么去学习真的很重要。人生的第一站，都要经过很多挫折，痛苦，也可能是磨难才能有成长，成长虽然伴随着阵痛，这大概就是人生的无奈了吧。我很庆幸自己没有经过太多的挫折，一路走来在不同的阶段都有不同的人给予了帮助。在长沙的三个月里，我学习了很多东西（华声在线）。</p>
+<ul>
+<li>div+css布局（position布局和float布局）</li>
+<li>了解到了基础的语义化（比如超链接的时候用a标签，标题用h系列标签，按钮用button，行内用span）</li>
+<li>学习了JavaScript基础（比如大量的使用函数，俗称面向过程编程，一个功能一个函数，大的功能用很多个小函数组合而成）</li>
+<li>接触了jQuery（会用DOM选择器，那个年代没有比jQuery更好的解决方案）</li>
+<li>了解到了IE6兼容性的问题（虽然，我现在都忘记的差不多了）</li>
+</ul>
+<p>阅读到的书有：</p>
+<p><a href="https://book.douban.com/subject/4861462/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s4380650.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/3082278/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s3103215.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/4111399/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s24398905.jpg" alt=""></a></p>
+<p><a href=""><img src="http://ec4.images-amazon.com/images/I/51hoD75E26L._SX397_BO1,204,203,200_.jpg" alt=""></a></p>
+<p>PS：这四本书有些年头了。</p>
+<p>真正开始有意识的对编程的认知还是要从珠海开始，那时候在自己的心里才建立起了体系。不得不说，从长沙到珠海的跨越对于自己的职业和专业有了非常大的促进作用。远光软件是一家企业管理和社会服务信息系统供应商，以国家电网，南方电网做为主要的服务客户（当然还有五大发电集团以及珠海市市政系统的研发）。到远光软件，做的第一个项目就是《费用报销系统》，这是一个典型的单页应用（SAP），在客户端层面进行了MVC分层，模块化，以及大量的操作表格（编辑费用报销流程）和Ajax的交互。在珠海认识了博士（我的导师，远光软件对于新入职的员工都会安排一个专职的导师来辅助新员工展开工作，博士后来自己去创业了，他一直想开一家属于自己的咖啡店，虽然经历了挫折，最后加入了魅族）。要说到如何加入远光软件，不得不说（平时的兴趣爱好说不定在某些时候真能有所帮助）。我们部门的总经理是一个很nice的茶友和网友（当时玩博客园），这样看来帮助还真是无声无息之间就发生了，我得到了一次机会，回过头来看，这真的是人生的转折。</p>
+<ul>
+<li>了解到了MVC，参与了公司内部MVC框架的开发（seeker.js）</li>
+<li>重新学习了JavaScript，对于这门语言有了更深刻的体会</li>
+<li>了解到了Ajax以及网络传输层的通信（HTTP）</li>
+<li>开始认识到构建一个大型项目，模块化的重要性</li>
+<li>开始了解到有Grunt这么一个构建工具</li>
+<li>学习了Node.js</li>
+</ul>
+<p>在珠海的日子里现在想起来自己的状态：就是一个只会学习的机器。那段时间，我对Objective-C产生了浓厚的兴趣，开始自己倒腾黑苹果，学习Objective-C，CocoaTouch框架，参与部门内部项目的开发（虽然半途夭折了），接触到了UNIX操作系统，这才发现自己一直使用的windows好low啊。那个时候的自己真让自己怀念，其实学习它真的是一种精神（不断的探索，不断的吸取），坚持下来之后，才能知道雨后会不会是彩虹。也是在这一段时间里，我加入了一个网友组织的前端分享网站（2012年）：<a href="http://www.w3cplus.com/" target="_blank" rel="noopener">w3cplus</a>，认识了大漠，为之，99，993，也有了一个不常用的ID《文人》，多数情况下，我一直用着自己的icepy（直到后来我才认识到ID混乱带来的麻烦，就索性一直用着icepy了。），只是现在和为之联系的比较少了，知道他去了腾讯。在生活里，人与人的相处分阶段，天下没有不散的宴席，这是真的。</p>
+<p>在珠海这一过就是两年，阅读的书籍非常多，多到自己都数不清楚了，大体上来说分为了两个部分，语言类的和编程思想类的，印象中大约还能记得的就只有这些了：</p>
+<p><em>JavaScript</em></p>
+<p><a href="https://book.douban.com/subject/2228378/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s5860151.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/3590768/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s3651235.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/3329540/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s3398900.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/10546125/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s8958650.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/5362856/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s6245861.jpg" alt=""></a></p>
+<p><em>iOS</em></p>
+<p><a href="https://book.douban.com/subject/3864073/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s3885296.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/6920082/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s28020216.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/3870385/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s3890550.jpg" alt=""></a></p>
+<p><em>编程思想类</em></p>
+<p><a href="https://book.douban.com/subject/10746113/" target="_blank" rel="noopener"><img src="http://ec4.images-amazon.com/images/I/51L3vC93PEL._SX383_BO1,204,203,200_.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/1152912/" target="_blank" rel="noopener"><img src="http://ec4.images-amazon.com/images/I/51yWNzHYyUL._SX357_BO1,204,203,200_.jpg" alt=""></a></p>
+<p><a href="http://www.amazon.cn/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F-%E7%B2%BE%E9%AB%93%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86-%E6%96%AF%E6%89%98%E6%9E%97%E6%96%AF/dp/B0041859AI/ref=sr_1_2?ie=UTF8&amp;qid=1459746651&amp;sr=8-2&amp;keywords=%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%B2%BE%E9%AB%93%E4%B8%8E%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86" target="_blank" rel="noopener"><img src="http://ec4.images-amazon.com/images/I/51yo0pczfbL._SX340_BO1,204,203,200_.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/1139426/" target="_blank" rel="noopener"><img src="http://ec4.images-amazon.com/images/I/51U7%2BI63eWL._SX354_BO1,204,203,200_.jpg" alt=""></a></p>
+<p>阅读完那三本书（iOS）之后其他时间学习iOS开发就靠官方文档以及Google了，其实中间很长一段时间内自己并不清楚自己到底喜欢哪一个，索性两个都比较深入的学习了，当时自己都不知道这个决定对于今后有多大的影响，后来我才发现我特别的适合做混合应用（Hybrid App）或者手机端的开发，因为我对Native（iOS端）的熟悉程度不亚于前端（HTML,CSS,JavaScript）。慢慢的对于应用我更关注代码的层次维护性与可读性，使用Instruments来分析优化iOS应用，抓包分析HTTP，在设计（软件设计模式）与编写之际找到一个平衡。真的还要感谢网易公司（黄易^_^）推出了《网易公开课》<a href="http://open.163.com/" target="_blank" rel="noopener">http://open.163.com/</a>补全了我大量计算机方面的基础知识。</p>
+<p>2013年底，我去了上海住在为之家中，有一段时间里都快不知道该去做些什么。后来经过大漠的推荐，我去了携程无线事业部面试，这是一个很棒的团队。有幸加入其中，真觉得自己的选择和方向是对的。虽然，我们最后解散分拆了（很可惜）。携程的App和手机网站全部使用Hybrid技术来构建，一套代码运行在三端（iOS，Android，Mobile）。在无线事业部感觉每一天都过的很新鲜，因为我能做很多事情，一是验证自己的想法，二是积累了大量的实践经验，三是我可以做更多混合编程的东西。我的leader有泉帮助我很快的适应了携程的技术栈（当时使用的是requirejs，zepto，backbone，underscore搭建起来的技术栈），至今我都还能想起来在携程认识的那些人，跟着张老虎跑门票的业务（还有汗巾一起），听刘大师吹牛皮，张爸爸讲UI组件，帮助淳敏用python写了一个打包工具，看磊BB（叶小钗）指点江山，意气风发。大格子汉卿聊上海话，左盟主策笑傲江湖，明星弄《酒店》。是的，就是这样的一个团队，虽然每天都很“苦逼”（几乎每天都很正能量的忙到十点，十一点），却也收获了更多。</p>
+<ul>
+<li>通过bridge（自定义协议）与Native进行交互</li>
+<li>研究了phoneGap的技术，比如在“后台”相对于前端Native就是后台，进行网络，线程的优化</li>
+<li>研究了辅助前端调试的工具，比如远程代理，客户端App代理</li>
+<li>对JavaScript语言有了更深刻的理解</li>
+<li>使用Node.js跑SEO页面，对Node.js掌握的比较全面了，采用新的技术解决回调过深的问题</li>
+</ul>
+<p>在携程一直到无线事业部解散，分拆陆陆续续待了十个月，虽然很短暂，但是却印证了自己所想，在心底一直坚持的信念，有了一次很充分的肯定：使用前端技术开发手机App。</p>
+<p><a href="https://book.douban.com/subject/22190840/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s25933771.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/10608238/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s9066310.jpg" alt=""></a></p>
+<p><a href="https://book.douban.com/subject/25768396/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s27269296.jpg" alt=""></a></p>
+<p>这一年里一共买了三本书，不知道为什么后面这些年买书买的比较少了，更多的是通过开源社区来获取资料，学习。虽然我在珠海的时候就注册了<a href="https://github.com/icepy" target="_blank" rel="noopener">Github icepy</a>，但是开始玩起来还是去了携程之后。</p>
+<p>三月份（2015年）我去了每日优鲜，当时我们七个人（两个纯前端，我和小袁，现在和我一起在《音悦台》，凤鸣偶尔会帮助我们，四个python服务端，一个切图的女同学）在望京对面的麒麟社（看起来很像家居楼，比较破），用<a href="http://ionicframework.com/" target="_blank" rel="noopener">ionic</a>快速搭建了跑在三端（iOS，Android，微信端）的每日优鲜App。中间经历了很多很痛苦的试验阶段，包括有兼容微信（JS SDK），ionic是一套基于AngularJS的混合应用开发框架，在每日优鲜即将搬入望京SOHO的前三天，我离开了。其实，当时我并不知道自己想要去做些什么，但是又不得不去做些什么。（现在的每日优鲜App早已经用原生语言重写了一套，部分混合了一些前端页面，他们发展的很不错。）</p>
+<p>在外面的世界混了一圈，心里有了些疲惫，特别是听到了《去大理》，《一人一花》，想起了雪峰山的家乡，于是就回去了。本来应该很满意的过着自己的隐居生活，和同学开始筹备了一个养殖场和果园，也写好了相应的微信网站和运营计划，我想我们原生态的农业产品，在长沙，怀化等城市中应该会有很大的需求，因为人们对于食品安全的关注度比以往都高了很多很多。很不幸，因为合伙人理念的冲突，我又失败了。</p>
+<p>九月份（2015年），我又去北京找了一个工作，负责乐家园社区O2O项目的前端设计，两个人搭起来了一个社区App，我们采用backbone很快堆出了原形，看起来发展势头很良好，可是这一年资本寒冬来了，12月份老板调整了方向，开始做物业管理系统基本放弃了to C的产品，物业管理系统使用了react，es2015，webpack来搭建，可是我依然选择了离开。</p>
+<p>从携程离职之后的2015年并不是很顺利，起伏经历了很多，但是这一年里却是买书读书读的非常多的一年（<a href="https://github.com/icepy/_posts/issues/20" target="_blank" rel="noopener">2015年我阅读的书籍</a>），这是一个很有趣的现象，当然我闲下来的时候（我并不知道该去做些什么，只剩读书了。），读书成了我唯一的爱好。</p>
+<ul>
+<li>学习了react，es2015，webpack</li>
+<li>开始去了解和掌握react native的知识</li>
+<li>更深入的学习了iOS，包括有新推出的Swift语言</li>
+<li>关注的点更多的是在于编程思想方面，比如最佳的实践，如何采用合适的技术栈搭建产品，编程的规范，自动化CI方面等基础设施的研究</li>
+<li>对于开源社区的依赖程度更高了，比如现今成了Github的重度用户</li>
+</ul>
+<p><a href="https://book.douban.com/subject/4826290/" target="_blank" rel="noopener"><img src="https://img3.doubanio.com/lpic/s6164140.jpg" alt=""></a></p>
+<h2 id="2016年"><a href="#2016年" class="headerlink" title="2016年"></a>2016年</h2><p>总的来说我依然很看好JavaScript的应用范围，也打算继续耕耘在这个领域中，努力使自己的知识结构体系可以保持与世界趋势的同步。</p>
+<p>今后的很长的时间里，我依然会保持对技术的敏感与同步，其实写到最后，千言万语貌似还有很多话未说完。我很不希望，像很多前辈说的那样，编程是一个青春饭，人到了一定的年龄（你在知乎上搜索，很多都是30岁之后该如何转型的帖子），这是国情吗？于是，我拒绝了管理岗位，我更希望自己可以做一个纯粹热爱技术的人。</p>
+<p>下一个阶段（主要给刚入行的同学看）：</p>
+<p><strong>保持对新技术的敏感</strong></p>
+<p>对技术的热爱是你保持对新技术的敏感正确姿势。</p>
+<p><strong>遇到问题该怎么办</strong></p>
+<p>其实大部分的问题真的都是小问题，首先自己不能害怕问题，先在Google中搜索一下可以解决掉80%以上的问题，其次对于复杂的问题可能需要分解一下源代码，从其逻辑中查找问题，最后自己实在不爽（造个轮子）。</p>
+<p><strong>组织自己的开发环境</strong></p>
+<p>建议大家熟练的使用一套自己的开发环境，比如快捷键，oh-my-zsh，IDE。前端首推的IDE是Webstorm，然后是Atom，最后是Sublime Text 3。</p>
+<p>不要问我为什么没有Vim，因为大家可以使用这些编辑器或者IDE的vim插件，比如我就使用Atom的vim-mode。</p>
+<p><strong>老生常谈的如何学习</strong></p>
+<p>保持对技术的热爱，你有兴趣才可能去学习，勉强（强扭的瓜不甜）是会很痛苦的，如果你有兴趣，Github上大量的资源会让你根本学不完。</p>
+<p><strong>弄个云服务器</strong></p>
+<p>如果有兴趣和有时间弄一个阿里云或者其他任何云服务器，自己去捣腾一下，能更清楚认识Web开发。</p>
+<hr>
+
+  </div>
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2016年"><span class="toc-number">1.</span> <span class="toc-text">2016年</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://icepy.me/2016/04/05/2016-01/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://icepy.me/2016/04/05/2016-01/&text=我的编程之路"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://icepy.me/2016/04/05/2016-01/&is_video=false&description=我的编程之路"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=我的编程之路&body=Check out this article: https://icepy.me/2016/04/05/2016-01/"><i class="fas fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://icepy.me/2016/04/05/2016-01/&title=我的编程之路"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://icepy.me/2016/04/05/2016-01/&name=我的编程之路&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fas fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fas fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fas fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fas fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 icepy
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="https://zhuanlan.zhihu.com/c_134626828">周末例行</a></li>
+         
+          <li><a href="https://icepy.me/blockchain-navigate/">区块链导航</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="/about/">About me</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/fontawesome-all.min.css">
+<link rel="stylesheet" href="/lib/justified-gallery/css/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/js/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-118762667-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Baidu Analytics -->
+
+<!-- Disqus Comments -->
+
+
