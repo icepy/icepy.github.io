@@ -1,14 +1,15 @@
 {
-  "main.css": "/static/css/main.cb886c69.chunk.css",
-  "main.js": "/static/js/main.5f7dfc33.chunk.js",
-  "main.js.map": "/static/js/main.5f7dfc33.chunk.js.map",
-  "static/js/1.f03e8ae8.chunk.js": "/static/js/1.f03e8ae8.chunk.js",
-  "static/js/1.f03e8ae8.chunk.js.map": "/static/js/1.f03e8ae8.chunk.js.map",
+  "main.css": "/static/css/main.175fc63b.chunk.css",
+  "main.js": "/static/js/main.e65e49bb.chunk.js",
+  "main.js.map": "/static/js/main.e65e49bb.chunk.js.map",
+  "static/js/1.ac9ae1ed.chunk.js": "/static/js/1.ac9ae1ed.chunk.js",
+  "static/js/1.ac9ae1ed.chunk.js.map": "/static/js/1.ac9ae1ed.chunk.js.map",
   "runtime~main.js": "/static/js/runtime~main.229c360f.js",
   "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/css/main.175fc63b.chunk.css.map": "/static/css/main.175fc63b.chunk.css.map",
   "static/media/meishi.png": "/static/media/meishi.01241491.png",
-  "static/css/main.cb886c69.chunk.css.map": "/static/css/main.cb886c69.chunk.css.map",
+  "static/media/bg.jpg": "/static/media/bg.3f44b417.jpg",
   "index.html": "/index.html",
-  "precache-manifest.17ffd2808ab32af9a43ac132862e6505.js": "/precache-manifest.17ffd2808ab32af9a43ac132862e6505.js",
+  "precache-manifest.b4040a3fbc7f19470418e7501a20a3c5.js": "/precache-manifest.b4040a3fbc7f19470418e7501a20a3c5.js",
   "service-worker.js": "/service-worker.js"
 }
